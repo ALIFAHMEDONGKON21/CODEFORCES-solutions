@@ -1,0 +1,69 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define     ll                              long long int
+#define     ull                             unsigned long long int
+#define     ui                              unsigned int
+//STL :
+#define     vi                              vector<int>
+#define     vb                              vector<bool>
+#define     vs                              vector<string>
+#define     vl                              vector<ll>
+#define     si                              set<int>
+#define     sl                              set<ll>
+#define     ip                              pair<int,int>
+#define     lp                              pair<ll,ll>
+#define     ips                             pair<string,int>
+#define     lps                             pair<string,ll>
+#define     ipc                             pair<char,int>
+#define     lpc                             pair<char,ll>
+#define     vip                             vector<ip>
+#define     PQ                              priority_queue
+#define     vlp                             vector<lp>
+#define     hashmap                         unordered_map
+#define     all(x)                          x.begin(),x.end()
+#define     forI                             (i,s,n) for(int i=s; i<n; i++)
+#define     in_range_back(i,x,y)            for(int i=y;i>=x;i--)
+#define     cin_the_array(x,o,n)            for(int i=o;i<=n;i++){cin>>x[i];}
+#define     Fi_Amanillah                       return 0;
+#define     Bismillahir_Rahmanir_Raheem      int main()
+
+
+
+//......Let's Start ........................//
+
+
+
+Bismillahir_Rahmanir_Raheem{
+    
+    int t;               cin>>t;
+   while(t--){
+      ll a,b,xk,yk,xq,yq;
+      cin>>a>>b>>xk>>yk>>xq>>yq;
+ 
+      vector<ll> dx={-a,-a,a,a,b,b,-b,-b};
+      vector<ll> dy={-b,b,b,-b,a,-a,a,-a};
+ 
+      set<pair<ll,ll>> dexK;
+      set<pair<ll,ll>> dexQ;
+ 
+      for(int i=0;i<8;i++){
+         dexK.insert({xk+dx[i],yk+dy[i]});
+      }
+      for(int i=0;i<8;i++){
+         dexQ.insert({xq+dx[i],yq+dy[i]});
+      }
+ 
+      int ans=0;
+ 
+      for(auto i:dexK){
+         if(dexQ.find(i)!=dexQ.end()){
+            ans++;
+         }
+      }
+ 
+      cout<<ans<<endl;
+ 
+   }
+    
+    Fi_Amanillah;
+}
